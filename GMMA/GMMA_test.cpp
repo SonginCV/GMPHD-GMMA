@@ -102,7 +102,7 @@ int main()
 				cerr << ") ";
 				if (!DEBUG_PRINT) cerr << "\r";
 				if (iFrameCnt >= totalFrames) {
-					printf("All frames has been loaded.");
+					printf("All frames has been processed.\n");
 					break;
 				}
 				cv::Mat img = cv::imread(string(imgPaths[iFrameCnt]));
@@ -172,17 +172,8 @@ int main()
 						if (iFrameCnt == 0) {
 							tracker.SetTotalFrames(totalFrames);
 						}
-						bbs_trk = \
-							//LocalTrackers[iTrkers].DoLocalMOT(iFrameCnt, frame_input, nTrgs[iTrkers], bbs[iTrkers], nbs[iTrkers]);
-							tracker.DoMOT(iFrameCnt / frames_skip_interval, img, nTrgs, bbs, nbs, Th_Confs[cfs]);
-						//LocalTrackers[iTrkers].DoLocalTrackingLow(iFrameCnt / frames_skip_interval, frame_input, nTrgs[iTrkers], bbs[iTrkers], nbs[iTrkers]);
-
-						//if (iTrkers == OBJECT_TYPE_TRUCK - 1) printf("(%d:%d)", nbs[iTrkers],nTrgs[iTrkers]);
-						//LocalTrackers[iTrkers].DoLocalTrackingLong(iFrameCnt, frame_input, nTrgs[iTrkers], bbs[iTrkers], nbs[iTrkers]);
-
-
+						bbs_trk = tracker.DoMOT(iFrameCnt / frames_skip_interval, img, nTrgs, bbs, nbs, Th_Confs[cfs]);
 					}
-					//);
 					// Low & Mid level Tracking
 					img_trk_delay = tracker.imgBatch[0].clone();
 					//img_trk_delay = img_trk.clone();
@@ -242,8 +233,8 @@ int main()
 						// Draw tracking bounding boxes in tracking result image
 						string objType = "";
 						if (tracker.trackObjType == OBJECT_TYPE_PERSON)		objType = "Person";
-						if (tracker.trackObjType == OBJECT_TYPE_CAR)			objType = "Car";
-						if (tracker.trackObjType == OBJECT_TYPE_BICYCLE)		objType = "Bicyle";
+						if (tracker.trackObjType == OBJECT_TYPE_CAR)		objType = "Car";
+						if (tracker.trackObjType == OBJECT_TYPE_BICYCLE)	objType = "Bicyle";
 						if (tracker.trackObjType == OBJECT_TYPE_SUITCASE)	objType = "Suitcase";
 						if (tracker.trackObjType == OBJECT_TYPE_CHAIR)		objType = "Chair";
 						if (tracker.trackObjType == OBJECT_TYPE_TRUCK)		objType = "Truck";
@@ -295,7 +286,7 @@ int main()
 				if (iFrameCnt == 0) {
 					/*if (sq == 0) cvWaitKey();
 					else*/ cvWaitKey(10);
-				start = clock();
+					start = clock();
 				}
 				if (cvWaitKey(10) == 3) { // ctrl+c
 					if (nbs > 0) if (bbs != NULL) free(bbs);
@@ -323,8 +314,8 @@ int main()
 
 			end = clock() - start;
 			int totalProcessingFrames = iFrameCnt / frames_skip_interval; // 눈에 보이는 속도가 아닌 처리속도
-			printf("Total processing time %.2lfs (%.2lffps) (including displaying)\n", (double)end / (double)1000., (double)totalProcessingFrames / (double)((double)end / (double)1000.0));
-			printf("Total processing time %.2lfs (%.2lffps)\n", totalProcessingSecs, 1.0 / (totalProcessingSecs / (double)totalProcessingFrames));
+			printf("Processing time %.2lfs (%.2lffps)\n", (double)end / (double)1000., (double)totalProcessingFrames / (double)((double)end / (double)1000.0));
+			printf("Processing time %.2lfs (%.2lffps) (tracking only)\n", totalProcessingSecs, 1.0 / (totalProcessingSecs / (double)totalProcessingFrames));
 
 
 
