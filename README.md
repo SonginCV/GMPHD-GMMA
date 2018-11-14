@@ -9,8 +9,10 @@ OpenCV 3.4.1 and boost 1.61 ared used to implement the propsed GMPHD-GMMA tracke
 The GMPHD filter based Online Multiple Object Tracker using Group Management and Relative Motion Analysis
 
 ## Input
+Image sequence & Detection Response
 
 ## Output
+Tracking Results Files
 
 ## User guide
 We will open it after the related conference presentation.
