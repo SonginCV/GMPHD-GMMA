@@ -5,15 +5,15 @@ All source codes are written in Visual C++ using Microsoft Visual Studio 2015 on
 
 OpenCV 3.4.1 and boost 1.61 ared used to implement the propsed GMPHD-GMMA tracker.
 
-## User guide
-We will open it after the related conference presentation.
-
 ## GMPHD-GMMA
 The GMPHD filter based Online Multiple Object Tracker using Group Management and Relative Motion Analysis
 
 ## Input
 
 ## Output
+
+## User guide
+We will open it after the related conference presentation.
 
 ## References
 [1] Ba-Ngu Vo and Wing-Kin Ma. "The gaussian mixture probability hypothesis density filter." IEEE Transactions on Signal Processing, 54(11):4091–4104, Nov. 2006.
