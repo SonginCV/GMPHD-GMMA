@@ -6,7 +6,7 @@ All source codes are written in Visual C++ using Microsoft Visual Studio 2015 on
 OpenCV 3.4.1 and boost 1.61 ared used to implement the propsed tracker GMPHD-GMMA.
 
 ## Use guide
-Will be open after the related conference presentation.
+We will open it after the related conference presentation.
 
 ## GMPHD-GMMA
 The GMPHD filter based Online Multiple Object Tracker using Group Management and Relative Motion Analysis
