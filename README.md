@@ -15,12 +15,12 @@ Image Sequence & Detection Response
 Tracking Results Files
 
 ## User guide
-We will open it after the related conference presentation.
+We are working on it
 
 ## References
 [1] Ba-Ngu Vo and Wing-Kin Ma. "The gaussian mixture probability hypothesis density filter." IEEE Transactions on Signal Processing, 54(11):4091–4104, Nov. 2006.
 
 [2] Young-min Song, Young-chul Yoon, Kwangjin Yoon, Moongu Jeon. "Online and Real-Time Tracking with the GM-PHD Filter
-using Group Management and Relative Motion Analysis." In the IEEE International Conference on Advanced Video and Signal-Based Surveillance (AVSS), Nov. 2018. (will be presented) 
+using Group Management and Relative Motion Analysis." In the IEEE International Conference on Advanced Video and Signal-Based Surveillance (AVSS), Nov. 2018.
 
 ## Citation
