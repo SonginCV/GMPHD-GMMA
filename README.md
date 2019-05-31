@@ -24,3 +24,14 @@ We are working on it
 using Group Management and Relative Motion Analysis." In the IEEE International Conference on Advanced Video and Signal-Based Surveillance (AVSS), Nov. 2018.
 
 ## Citation
+
+```
+@INPROCEEDINGS{GMMA, 
+author={Y. {Song} and Y. {Yoon} and K. {Yoon} and M. {Jeon}}, 
+booktitle={15th IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS)}, 
+title={Online and Real-Time Tracking with the GM-PHD Filter using Group Management and Relative Motion Analysis}, 
+year={2018}, 
+pages={1-6}, 
+month={Nov}
+}
+```
