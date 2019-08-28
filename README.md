@@ -3,7 +3,9 @@ This repository includes a c++ implementation of GMPHD-GMMA.
 
 All source codes are written in Visual C++ using Microsoft Visual Studio 2015 on Windows 10 x64.
 
-OpenCV 3.4.1 (https://www.opencv.org/opencv-3-4-1.html) and boost 1.61.0 (https://www.boost.org/users/history/version_1_61_0.html) are used to implement the proposed GMPHD-GMMA tracker.
+OpenCV 3.4.1 (https://www.opencv.org/opencv-3-4-1.html) and 
+boost 1.61.0 (Windows Binaries) (https://www.boost.org/users/history/version_1_61_0.html) 
+are used to implement the proposed GMPHD-GMMA tracker.
 
 ## GMPHD-GMMA
 The GMPHD filter based Online Multiple Object Tracker using Group Management and Relative Motion Analysis
